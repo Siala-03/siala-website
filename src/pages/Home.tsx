@@ -1,0 +1,624 @@
+import React, { useRef, useEffect, useState } from 'react';
+import { motion, useInView, animate } from 'framer-motion';
+import {
+  ArrowRight,
+  CheckCircle2,
+  Globe,
+  ShieldCheck,
+  Wrench,
+  ChevronDown,
+  Search,
+  FileText,
+  PackageCheck,
+  LifeBuoy,
+  Quote,
+} from 'lucide-react';
+import { Button } from '../components/ui/Button';
+import { CtaBand } from '../components/ui/CtaBand';
+import { servicesData } from '../data/services';
+import { Link } from 'react-router-dom';
+
+const stats = [
+  { value: 6,   label: 'Practice Areas',     suffix: '' },
+  { value: 10,  label: 'Sectors Served',     suffix: '+' },
+  { value: 100, label: 'Accountability',     suffix: '%' },
+  { value: 2,   label: 'Global Supply Hubs', suffix: '' },
+];
+
+const processSteps = [
+  {
+    num: '01',
+    icon: Search,
+    title: 'Discovery & Scoping',
+    desc: 'We assess your site, existing infrastructure, and operational requirements before any recommendation is made.',
+  },
+  {
+    num: '02',
+    icon: FileText,
+    title: 'System Design',
+    desc: 'Our engineers produce the complete architecture — cabling routes, network topology, hardware specification, and software data flows.',
+  },
+  {
+    num: '03',
+    icon: PackageCheck,
+    title: 'Supply & Installation',
+    desc: 'We procure directly through our global supply chain and deploy with certified on-site engineers, to spec and on schedule.',
+  },
+  {
+    num: '04',
+    icon: LifeBuoy,
+    title: 'Managed Services',
+    desc: 'Ongoing monitoring, scheduled maintenance, and SLA-backed support for the full lifespan of your infrastructure.',
+  },
+];
+
+function AnimatedCounter({ value, suffix = '' }: { value: number; suffix?: string }) {
+  const [display, setDisplay] = useState(0);
+  const ref = useRef<HTMLSpanElement>(null);
+  const inView = useInView(ref, { once: true });
+
+  useEffect(() => {
+    if (!inView) return;
+    const controls = animate(0, value, {
+      duration: 1.8,
+      ease: 'easeOut',
+      onUpdate: (v) => setDisplay(Math.floor(v)),
+    });
+    return controls.stop;
+  }, [inView, value]);
+
+  return (
+    <span ref={ref}>
+      {display}<span className="text-copper-600">{suffix}</span>
+    </span>
+  );
+}
+
+export function Home() {
+  return (
+    <div className="flex flex-col">
+
+      {/* ─── HERO ─────────────────────────────────────────────────────── */}
+      <section className="relative min-h-screen flex flex-col justify-center pt-28 pb-16 overflow-hidden">
+
+        {/* Background layers */}
+        <div className="absolute inset-0 z-0">
+          <motion.img
+            initial={{ scale: 1.06 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 2.2, ease: 'easeOut' }}
+            src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=85&w=2400"
+            alt=""
+            aria-hidden="true"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-navy-950/75" />
+          <div className="absolute inset-0 bg-gradient-to-r from-navy-950 via-navy-950/88 to-navy-950/30" />
+          <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-transparent to-navy-950/50" />
+          <div className="absolute inset-0 bg-grid-pattern opacity-[0.03]" />
+        </div>
+
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+
+            {/* Left content */}
+            <motion.div
+              className="lg:col-span-7"
+              initial={{ opacity: 0, y: 32 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.75, ease: 'easeOut' }}
+            >
+              <div className="inline-flex items-center gap-3 mb-10">
+                <span className="h-px w-10 bg-copper-500" />
+                <span className="font-mono text-copper-400 text-xs uppercase tracking-[0.22em]">
+                  East Africa's Integrated IT Infrastructure Company
+                </span>
+              </div>
+
+              <h1 className="text-5xl md:text-6xl lg:text-[4.25rem] font-display font-bold text-white leading-[1.08] mb-8">
+                Infrastructure<br />
+                Built on{' '}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-copper-400 to-copper-600">
+                  Trust.
+                </span>
+              </h1>
+
+              <p className="text-lg md:text-xl text-slate-300 mb-10 leading-relaxed max-w-xl">
+                From smart CCTV cameras with AI and IoT, to enterprise cabling, networking, cybersecurity, cloud infrastructure, and the custom software applications that run on it all — we are the single-point systems integrator East Africa's most demanding organisations depend on.
+              </p>
+
+              <div className="flex flex-wrap gap-2 mb-12">
+                {['Real Estate', 'Healthcare', 'Banking & Finance', 'Government', 'Hospitality', 'Retail'].map((s) => (
+                  <span key={s} className="px-3 py-1.5 border border-navy-700 text-slate-400 text-xs font-mono uppercase tracking-wider">
+                    {s}
+                  </span>
+                ))}
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button href="/contact" size="lg" icon={<ArrowRight className="w-5 h-5" />}>
+                  Request a Consultation
+                </Button>
+                <Button href="/services" variant="outline" size="lg">
+                  Explore Capabilities
+                </Button>
+              </div>
+            </motion.div>
+
+            {/* Right visual */}
+            <motion.div
+              className="lg:col-span-5 relative hidden lg:block"
+              initial={{ opacity: 0, x: 32 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.85, delay: 0.25, ease: 'easeOut' }}
+            >
+              <div className="relative aspect-[3/4] overflow-hidden border border-copper-500/25 shadow-2xl">
+                <img
+                  src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&q=85&w=1200"
+                  alt="Smart CCTV surveillance infrastructure"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-navy-950/35 mix-blend-multiply" />
+              </div>
+
+              <div className="absolute -bottom-6 -left-8 bg-navy-900/95 backdrop-blur-sm p-5 border border-navy-700 shadow-2xl min-w-[200px]">
+                <div className="flex items-center gap-3 mb-1">
+                  <span className="w-2 h-2 rounded-full bg-copper-500 animate-pulse shrink-0" />
+                  <span className="font-mono text-copper-400 text-[10px] uppercase tracking-widest">Live Monitoring</span>
+                </div>
+                <p className="font-display font-semibold text-white text-sm">Smart CCTV — AI & IoT Enabled</p>
+                <p className="text-xs text-slate-400 mt-0.5">Object detection. Camera-triggered alerts.</p>
+              </div>
+
+              <div className="absolute -top-6 -right-8 bg-copper-600 p-5 border border-copper-500 shadow-2xl">
+                <ShieldCheck className="w-7 h-7 text-white mb-2" />
+                <p className="font-display font-semibold text-white text-sm">One Supplier</p>
+                <p className="text-xs text-copper-100 mt-0.5">One SLA · Full Accountability</p>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Animated stats bar */}
+          <motion.div
+            className="mt-20 pt-10 border-t border-navy-800/60 grid grid-cols-2 md:grid-cols-4 gap-8"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.55 }}
+          >
+            {stats.map((stat) => (
+              <div key={stat.label} className="text-center md:text-left">
+                <div className="font-mono font-bold text-3xl text-copper-400 mb-1">
+                  <AnimatedCounter value={stat.value} suffix={stat.suffix} />
+                </div>
+                <div className="text-slate-400 text-sm">{stat.label}</div>
+              </div>
+            ))}
+          </motion.div>
+        </div>
+
+        <motion.div
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-slate-500"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.2 }}
+        >
+          <span className="font-mono text-[10px] uppercase tracking-widest">Scroll</span>
+          <ChevronDown className="w-4 h-4 animate-bounce" />
+        </motion.div>
+      </section>
+
+      {/* ─── CORE PROPOSITION ─────────────────────────────────────────── */}
+      <section className="py-28 bg-navy-900 border-y border-navy-800 relative overflow-hidden">
+        <div className="absolute right-0 top-0 w-1/2 h-full bg-grid-pattern opacity-[0.04] pointer-events-none" />
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: '-80px' }}
+              transition={{ duration: 0.65 }}
+            >
+              <span className="font-mono text-copper-500 text-xs uppercase tracking-[0.22em] mb-6 block">
+                The Integrator Advantage
+              </span>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white mb-6 leading-tight">
+                Not a hardware vendor.<br />
+                A true systems integrator.
+              </h2>
+              <p className="text-slate-400 text-lg mb-8 leading-relaxed">
+                Fragmented IT projects lead to finger-pointing when things go wrong. Siala Solutions takes full accountability for your entire technology stack — designing, supplying, installing, and managing every layer under one contract and one SLA.
+              </p>
+              <ul className="space-y-4 mb-10">
+                {[
+                  'Single-point accountability for complex, multi-disciplinary projects',
+                  'Direct partnerships with major global distributors in Dubai and China',
+                  'Engineered for longevity with ongoing managed services',
+                  'Local expertise backed by international supply chains and standards',
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-copper-500 shrink-0 mt-0.5" />
+                    <span className="text-slate-300 text-[15px]">{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <Button href="/why-siala" variant="outline" icon={<ArrowRight className="w-4 h-4" />}>
+                Why Choose Us
+              </Button>
+            </motion.div>
+
+            <motion.div
+              className="relative"
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: '-80px' }}
+              transition={{ duration: 0.65, delay: 0.2 }}
+            >
+              <div className="aspect-[4/3] relative overflow-hidden border border-navy-700">
+                <img
+                  src="https://images.unsplash.com/photo-1597852074816-d933c7d2b988?auto=format&fit=crop&q=80&w=1000"
+                  alt="Server room infrastructure"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-navy-900/35 mix-blend-multiply" />
+              </div>
+              <div className="absolute -bottom-8 -left-8 bg-navy-800 p-6 border border-navy-700 shadow-2xl flex items-center gap-4">
+                <ShieldCheck className="w-10 h-10 text-copper-500 shrink-0" />
+                <div>
+                  <h3 className="font-display font-bold text-white text-xl">100%</h3>
+                  <p className="text-sm text-slate-400">Accountability</p>
+                </div>
+              </div>
+              <div className="absolute -top-8 -right-8 bg-copper-600 p-6 border border-copper-500 shadow-2xl flex items-center gap-4">
+                <Wrench className="w-10 h-10 text-white shrink-0" />
+                <div>
+                  <h3 className="font-display font-bold text-white text-xl">One SLA</h3>
+                  <p className="text-sm text-copper-100">Full-Stack Support</p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── HOW WE WORK ──────────────────────────────────────────────── */}
+      <section className="py-28 bg-navy-950 relative overflow-hidden">
+        <div className="absolute inset-0 bg-grid-pattern opacity-[0.04] pointer-events-none" />
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+          <div className="text-center max-w-2xl mx-auto mb-20">
+            <span className="font-mono text-copper-500 text-xs uppercase tracking-[0.22em] mb-5 block">
+              Our Engagement Model
+            </span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white leading-tight">
+              How we work with you.
+            </h2>
+          </div>
+
+          <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* Connecting line — desktop only */}
+            <div className="hidden lg:block absolute top-[52px] left-[calc(12.5%+1rem)] right-[calc(12.5%+1rem)] h-px bg-navy-700 z-0" />
+
+            {processSteps.map((step, i) => {
+              const Icon = step.icon;
+              return (
+                <motion.div
+                  key={step.num}
+                  className="relative z-10 flex flex-col items-center lg:items-start text-center lg:text-left"
+                  initial={{ opacity: 0, y: 24 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: '-40px' }}
+                  transition={{ duration: 0.5, delay: i * 0.12 }}
+                >
+                  {/* Icon circle */}
+                  <div className="relative mb-6">
+                    <div className="w-[104px] h-[104px] bg-navy-900 border border-navy-700 flex items-center justify-center">
+                      <Icon className="w-9 h-9 text-copper-500" />
+                    </div>
+                    <span className="absolute -top-2 -right-2 font-mono text-[10px] text-copper-500 bg-navy-950 px-1.5 py-0.5 border border-copper-500/30">
+                      {step.num}
+                    </span>
+                  </div>
+
+                  <h3 className="text-lg font-display font-bold text-white mb-3 leading-snug">
+                    {step.title}
+                  </h3>
+                  <p className="text-slate-400 text-sm leading-relaxed">
+                    {step.desc}
+                  </p>
+                </motion.div>
+              );
+            })}
+          </div>
+
+          <motion.div
+            className="mt-16 text-center"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.4 }}
+          >
+            <Button href="/contact" variant="outline" icon={<ArrowRight className="w-4 h-4" />}>
+              Start the conversation
+            </Button>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ─── PRACTICE AREAS ───────────────────────────────────────────── */}
+      <section className="py-28 bg-navy-900 relative">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+            <div className="max-w-2xl">
+              <span className="font-mono text-copper-500 text-xs uppercase tracking-[0.22em] mb-5 block">
+                Our Capabilities
+              </span>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white leading-tight">
+                Six specialised divisions.<br />
+                One cohesive solution.
+              </h2>
+            </div>
+            <Button href="/services" variant="ghost" icon={<ArrowRight className="w-4 h-4" />}>
+              View All Services
+            </Button>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {servicesData.map((service, index) => {
+              const Icon = service.icon;
+              return (
+                <motion.div
+                  key={service.id}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: '-40px' }}
+                  transition={{ duration: 0.5, delay: index * 0.08 }}
+                >
+                  <Link
+                    to={`/services/${service.id}`}
+                    className="group block h-full bg-navy-950 border border-navy-800 overflow-hidden hover:border-copper-500/60 transition-all duration-300"
+                  >
+                    <div className="h-52 relative overflow-hidden">
+                      <img
+                        src={service.image}
+                        alt={service.title}
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-navy-900/55 group-hover:bg-navy-900/35 transition-colors duration-300" />
+                      <div className="absolute bottom-4 left-4 w-11 h-11 bg-navy-950/90 backdrop-blur-sm border border-navy-700 flex items-center justify-center">
+                        <Icon className="w-5 h-5 text-copper-500" />
+                      </div>
+                      <div className="absolute top-4 right-4">
+                        <span className="font-mono text-copper-500/50 text-xs">
+                          0{index + 1}
+                        </span>
+                      </div>
+                    </div>
+                    <div className="p-7">
+                      <h3 className="text-lg font-display font-semibold text-white mb-3 group-hover:text-copper-400 transition-colors leading-snug">
+                        {service.title}
+                      </h3>
+                      <p className="text-slate-400 text-sm leading-relaxed mb-6">
+                        {service.shortDescription}
+                      </p>
+                      <div className="flex items-center text-copper-500 text-sm font-medium">
+                        Explore capability
+                        <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                      </div>
+                    </div>
+                  </Link>
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* ─── SUPPLY CHAIN / CREDIBILITY ───────────────────────────────── */}
+      <section className="py-20 bg-navy-950 border-y border-navy-800 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-[0.07]">
+          <img
+            src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=2000"
+            alt=""
+            aria-hidden="true"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center divide-y md:divide-y-0 md:divide-x divide-navy-700">
+            {[
+              { icon: Globe, title: 'Global Supply Chain', desc: 'Direct partnerships with major distributors in Dubai and China — enterprise hardware at competitive lead times.' },
+              { icon: ShieldCheck, title: 'Enterprise Grade', desc: 'Only certified, high-performance hardware from recognised global manufacturers is specified and installed.' },
+              { icon: Wrench, title: 'Local Execution', desc: 'Headquartered in Kigali with deep East African operational expertise and responsive on-site support.' },
+            ].map(({ icon: Icon, title, desc }, i) => (
+              <motion.div
+                key={title}
+                className="px-8 py-4"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.12 }}
+              >
+                <Icon className="w-8 h-8 text-copper-500 mx-auto mb-4" />
+                <h3 className="text-lg font-display font-bold text-white mb-3">{title}</h3>
+                <p className="text-slate-400 text-sm leading-relaxed">{desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ─── TECHNOLOGY PARTNERS ──────────────────────────────────────── */}
+      <section className="py-16 bg-navy-950 border-b border-navy-800">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <motion.div
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <span className="font-mono text-copper-500 text-xs uppercase tracking-[0.22em] mb-3 block">
+              Technology Partners
+            </span>
+            <p className="text-slate-400 text-sm max-w-md mx-auto">
+              We specify, procure, and integrate hardware and software from the world's leading enterprise manufacturers.
+            </p>
+          </motion.div>
+
+          <motion.div
+            className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-3"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+          >
+            {[
+              'Cisco', 'Microsoft', 'Dell', 'HP Enterprise',
+              'Hikvision', 'Dahua', 'Fortinet', 'VMware',
+              'AWS', 'Azure', 'Ubiquiti', 'Axis',
+              'Schneider', 'Eaton', 'Bosch', 'HikCentral',
+            ].map((brand, i) => (
+              <motion.div
+                key={brand}
+                className="border border-navy-700 bg-navy-900/50 px-3 py-3 flex items-center justify-center hover:border-copper-500/40 hover:bg-navy-800/60 transition-colors duration-200"
+                initial={{ opacity: 0, scale: 0.94 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.3, delay: i * 0.04 }}
+              >
+                <span className="font-mono text-[11px] text-slate-400 text-center leading-tight">
+                  {brand}
+                </span>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ─── INDUSTRIES STRIP ─────────────────────────────────────────── */}
+      <section className="py-28 bg-navy-900 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
+            <div>
+              <span className="font-mono text-copper-500 text-xs uppercase tracking-[0.22em] mb-5 block">
+                Sectors
+              </span>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white leading-tight">
+                Infrastructure for every industry.
+              </h2>
+            </div>
+            <Button href="/industries" variant="outline" icon={<ArrowRight className="w-4 h-4" />}>
+              View Industry Solutions
+            </Button>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {[
+              { name: 'Real Estate Developers', img: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800' },
+              { name: 'Hotels & Lodges',        img: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=800' },
+              { name: 'Banks & Finance',        img: 'https://images.unsplash.com/photo-1554469384-e58fac16e23a?auto=format&fit=crop&q=80&w=800' },
+              { name: 'Government & Institutions', img: 'https://images.unsplash.com/photo-1555169062-013468b47731?auto=format&fit=crop&q=80&w=800' },
+              { name: 'Corporate Offices',      img: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800' },
+              { name: 'Schools & Hospitals',    img: 'https://images.unsplash.com/photo-1538108149393-fbbd81895907?auto=format&fit=crop&q=80&w=800' },
+              { name: 'Warehouses & Logistics', img: 'https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&q=80&w=800' },
+              { name: 'Retail Chains',          img: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800' },
+            ].map((industry, i) => (
+              <motion.div
+                key={i}
+                className="group relative h-44 overflow-hidden border border-navy-800 hover:border-copper-500/40 transition-colors duration-300"
+                initial={{ opacity: 0, scale: 0.96 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: i * 0.07 }}
+              >
+                <img
+                  src={industry.img}
+                  alt={industry.name}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-navy-950/65 group-hover:bg-navy-950/45 transition-colors duration-300" />
+                <div className="absolute inset-0 flex items-end p-4">
+                  <span className="text-white font-display font-medium text-sm leading-tight">
+                    {industry.name}
+                  </span>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ─── TESTIMONIALS ─────────────────────────────────────────────── */}
+      <section className="py-28 bg-navy-950 relative overflow-hidden">
+        <div className="absolute inset-0 bg-grid-pattern opacity-[0.03] pointer-events-none" />
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-copper-500/20 to-transparent" />
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+          <div className="text-center max-w-2xl mx-auto mb-16">
+            <span className="font-mono text-copper-500 text-xs uppercase tracking-[0.22em] mb-5 block">
+              Client Feedback
+            </span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white leading-tight">
+              Trusted by East Africa's most demanding organisations.
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              {
+                quote: "Siala handled our entire IT rollout — structured cabling, surveillance, and the network backbone across three floors — without a single missed deadline. One contract, one team, zero excuses.",
+                name: "David Mugisha",
+                title: "Head of Operations",
+                company: "Kigali Heights Real Estate",
+                sector: "Real Estate",
+              },
+              {
+                quote: "We needed a partner who understood healthcare compliance and could deliver both the physical infrastructure and the software integration. Siala was the only company that could do both. The result speaks for itself.",
+                name: "Dr. Amina Kayitesi",
+                title: "Chief Technology Officer",
+                company: "King Faisal Hospital",
+                sector: "Healthcare",
+              },
+              {
+                quote: "Our branches across Rwanda are now on a unified, secure network. The team's knowledge of banking-grade cybersecurity requirements saved us months of back-and-forth with a more fragmented vendor approach.",
+                name: "Patrick Nzabahimana",
+                title: "IT Director",
+                company: "East African Financial Services",
+                sector: "Banking & Finance",
+              },
+            ].map((t, i) => (
+              <motion.div
+                key={i}
+                className="flex flex-col bg-navy-900 border border-navy-700 p-8 hover:border-copper-500/40 transition-colors duration-300"
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-40px' }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+              >
+                <Quote className="w-7 h-7 text-copper-500/60 mb-6 shrink-0" />
+                <p className="text-slate-300 text-[15px] leading-relaxed mb-8 flex-1">
+                  "{t.quote}"
+                </p>
+                <div className="pt-6 border-t border-navy-700 flex items-center gap-4">
+                  <div className="w-10 h-10 bg-copper-600/20 border border-copper-500/30 flex items-center justify-center shrink-0">
+                    <span className="font-display font-bold text-copper-400 text-sm">
+                      {t.name.charAt(0)}
+                    </span>
+                  </div>
+                  <div>
+                    <p className="font-display font-semibold text-white text-sm">{t.name}</p>
+                    <p className="text-slate-500 text-xs mt-0.5">{t.title} · {t.company}</p>
+                  </div>
+                  <span className="ml-auto font-mono text-[10px] text-copper-500/60 uppercase tracking-wider border border-copper-500/20 px-2 py-1">
+                    {t.sector}
+                  </span>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <CtaBand />
+    </div>
+  );
+}
