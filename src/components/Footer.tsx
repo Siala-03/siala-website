@@ -17,7 +17,7 @@ export function Footer() {
               <img
                 src="/sialalogo.png"
                 alt="Siala Solutions"
-                className="h-7 w-auto brightness-0 invert opacity-80 hover:opacity-100 transition-opacity duration-200"
+                className="h-7 w-auto invert mix-blend-lighten opacity-80 hover:opacity-100 transition-opacity duration-200"
               />
             </Link>
             <p className="text-slate-400 text-sm leading-relaxed">
