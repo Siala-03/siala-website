@@ -2,7 +2,6 @@ import React from 'react';
 import { PageHero } from '../components/ui/PageHero';
 import { CtaBand } from '../components/ui/CtaBand';
 import { motion } from 'framer-motion';
-import { Building2, Network, Shield } from 'lucide-react';
 
 export function About() {
   return (
@@ -74,64 +73,6 @@ export function About() {
                 <p className="text-slate-400 text-xs mt-1 font-mono">Serving East Africa</p>
               </div>
             </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* The Siala Group */}
-      <section className="py-28 bg-navy-950 relative overflow-hidden">
-        <div className="absolute inset-0 bg-grid-pattern opacity-[0.06]" />
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <Building2 className="w-10 h-10 text-copper-500 mx-auto mb-6" />
-            <span className="font-mono text-copper-500 text-xs uppercase tracking-[0.22em] mb-5 block">
-              Corporate Structure
-            </span>
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-5 leading-tight">
-              Part of The Siala Group
-            </h2>
-            <p className="text-slate-400 text-lg leading-relaxed">
-              Siala Solutions operates within a broader ecosystem of technological excellence. Alongside our sister company Servv, we drive innovation across multiple sectors in the region.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
-            {[
-              {
-                title: 'Siala Solutions',
-                desc: 'Integrated smart infrastructure — networking, security, cybersecurity, compute, and smart building systems.',
-                icon: Network,
-                active: true,
-              },
-              {
-                title: 'Servv',
-                desc: 'Digital services and specialised software platforms for the modern enterprise.',
-                icon: Shield,
-                active: false,
-              },
-            ].map((company, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-                className={`p-8 border relative overflow-hidden ${
-                  company.active
-                    ? 'bg-navy-900 border-copper-500/60'
-                    : 'bg-navy-900/50 border-navy-800'
-                }`}
-              >
-                {company.active && (
-                  <div className="absolute top-0 right-0 w-24 h-24 bg-copper-500/10 rounded-bl-full" />
-                )}
-                <company.icon
-                  className={`w-8 h-8 mb-6 ${company.active ? 'text-copper-500' : 'text-slate-500'}`}
-                />
-                <h3 className="text-xl font-display font-bold text-white mb-3">{company.title}</h3>
-                <p className="text-slate-400 text-sm leading-relaxed">{company.desc}</p>
-              </motion.div>
-            ))}
           </div>
         </div>
       </section>
