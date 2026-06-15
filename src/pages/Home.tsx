@@ -219,21 +219,21 @@ export function Home() {
               transition={{ duration: 0.65 }}
             >
               <span className="font-mono text-copper-500 text-xs uppercase tracking-[0.22em] mb-6 block">
-                The Integrator Advantage
+                How we work
               </span>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white mb-6 leading-tight">
-                Not a hardware vendor.<br />
-                A true systems integrator.
+                One company.<br />
+                Everything under one contract.
               </h2>
               <p className="text-slate-400 text-lg mb-8 leading-relaxed">
-                Fragmented IT projects lead to finger-pointing when things go wrong. Siala Solutions takes full accountability for your entire technology stack: designing, supplying, installing, and managing every layer under one contract and one SLA.
+                Most IT projects in this region involve three or four separate contractors. When something breaks at the boundary between them, nobody owns the problem. We designed Siala to remove that gap entirely.
               </p>
               <ul className="space-y-4 mb-10">
                 {[
-                  'One point of accountability for complex, multi-disciplinary projects',
-                  'Direct partnerships with major global distributors in Dubai and China',
-                  'Engineered for longevity with ongoing managed services',
-                  'Local expertise backed by international supply chains and standards',
+                  'We scope, supply, install, and support the full stack ourselves',
+                  'Hardware sourced directly from distributors in Dubai and China',
+                  'One SLA covers every system we touch',
+                  'We stay on after handover — most of our clients are still on support contracts',
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-copper-500 shrink-0 mt-0.5" />
