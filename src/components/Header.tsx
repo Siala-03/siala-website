@@ -63,7 +63,7 @@ export function Header() {
             <img
               src="/sialalogo.png"
               alt="Siala Solutions"
-              className="h-8 w-auto invert mix-blend-lighten opacity-90 group-hover:opacity-100 transition-opacity duration-200"
+              className="h-10 w-auto invert opacity-90 group-hover:opacity-100 transition-opacity duration-200"
             />
           </Link>
 
