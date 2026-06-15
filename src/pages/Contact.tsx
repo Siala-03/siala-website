@@ -18,8 +18,8 @@ export function Contact() {
       <PageHero
         title="Let's Discuss Your Infrastructure Needs."
         subtitle="Get in Touch"
-        description="Whether you are scoping a new development, evaluating a technology refresh, or responding to a critical infrastructure requirement — our team in Kigali is ready to engage."
-        backgroundImage="https://images.unsplash.com/photo-1597852074816-d933c7d2b988?auto=format&fit=crop&q=85&w=2400"
+        description="Whether you are scoping a new development, evaluating a technology refresh, or responding to a critical infrastructure requirement, our team in Kigali is ready to engage."
+        backgroundImage="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=85&w=2400"
       />
 
       <section className="py-28 bg-navy-900 relative">

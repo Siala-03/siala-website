@@ -35,15 +35,15 @@ export function About() {
                   Siala Solutions was founded on a clear premise: modern organisations require complex technology, but procuring and managing that technology should not be complex for them.
                 </p>
                 <p>
-                  Historically, developers and institutions have had to juggle multiple vendors — one for networking, another for security, a third for servers. This fragmentation leads to integration failures, security gaps, and accountability gaps when systems go wrong.
+                  Historically, developers and institutions have had to juggle multiple vendors: one for networking, another for security, a third for servers. This fragmentation leads to integration failures, security gaps, and accountability gaps when systems go wrong.
                 </p>
                 <div className="border-l-2 border-copper-500 pl-6 py-2 my-8">
                   <p className="text-white font-display font-semibold text-xl leading-snug">
-                    We changed the model. We are a true systems integrator — one supplier, one SLA, total accountability.
+                    We changed the model. We are a true systems integrator. One supplier, one SLA, total accountability.
                   </p>
                 </div>
                 <p>
-                  From our headquarters in Kigali, we design, supply, install, and manage complete technology stacks. We bridge the gap between local execution and international standards, leveraging direct supply chain partnerships in Dubai and China to bring enterprise-grade hardware to the East African market efficiently.
+                  From our headquarters in Kigali, we design, supply, install, and manage complete technology stacks. We bridge the gap between local execution and international standards, leveraging direct supply chain partnerships in Dubai and China to bring enterprise grade hardware to the East African market efficiently.
                 </p>
               </div>
             </motion.div>

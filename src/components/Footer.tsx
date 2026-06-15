@@ -13,19 +13,12 @@ export function Footer() {
 
           {/* Brand */}
           <div className="flex flex-col gap-5">
-            <Link to="/" className="flex items-center gap-3 group shrink-0">
-              <div className="relative w-8 h-8 bg-copper-500 flex items-center justify-center overflow-hidden">
-                <div className="absolute inset-0 bg-grid-pattern opacity-25" />
-                <span className="font-display font-bold text-white text-lg relative z-10 leading-none">S</span>
-              </div>
-              <div className="flex flex-col leading-none">
-                <span className="font-display font-bold text-[14px] tracking-[0.12em] text-white uppercase">
-                  Siala Solutions
-                </span>
-                <span className="font-mono text-[9px] text-slate-500 tracking-[0.16em] uppercase mt-0.5">
-                  Integrated IT Infrastructure
-                </span>
-              </div>
+            <Link to="/" className="flex items-center shrink-0">
+              <img
+                src="/sialalogo.png"
+                alt="Siala Solutions"
+                className="h-7 w-auto brightness-0 invert opacity-80 hover:opacity-100 transition-opacity duration-200"
+              />
             </Link>
             <p className="text-slate-400 text-sm leading-relaxed">
               East Africa's integrated smart infrastructure company. One company, one SLA — from the cable in the wall to the firewall protecting it all.

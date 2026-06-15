@@ -12,7 +12,7 @@ export function Services() {
       <PageHero
         title="Six Practice Areas. One Accountable Partner."
         subtitle="End-to-End Capabilities"
-        description="We deliver full-stack technology solutions across six specialised practice areas — security, connectivity, cybersecurity, compute, smart building systems, and integrated software development. As a true systems integrator, we engineer every layer to work as one system under a single SLA."
+        description="We deliver technology solutions across six specialised practice areas: security, connectivity, cybersecurity, compute, smart building systems, and integrated software development. Every layer engineered to work as one system under a single SLA."
         backgroundImage="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=85&w=2400"
       />
 

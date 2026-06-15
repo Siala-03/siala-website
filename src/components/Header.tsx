@@ -59,19 +59,12 @@ export function Header() {
         <div className="flex items-center justify-between">
 
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 group shrink-0">
-            <div className="relative w-8 h-8 bg-copper-500 flex items-center justify-center overflow-hidden">
-              <div className="absolute inset-0 bg-grid-pattern opacity-25" />
-              <span className="font-display font-bold text-white text-lg relative z-10 leading-none">S</span>
-            </div>
-            <div className="flex flex-col leading-none">
-              <span className="font-display font-bold text-[15px] tracking-[0.14em] text-white group-hover:text-copper-400 transition-colors uppercase">
-                Siala Solutions
-              </span>
-              <span className="font-mono text-[9px] text-slate-500 tracking-[0.18em] uppercase mt-0.5">
-                Integrated IT Infrastructure
-              </span>
-            </div>
+          <Link to="/" className="flex items-center shrink-0 group">
+            <img
+              src="/sialalogo.png"
+              alt="Siala Solutions"
+              className="h-8 w-auto brightness-0 invert opacity-90 group-hover:opacity-100 transition-opacity duration-200"
+            />
           </Link>
 
           {/* Desktop Nav */}

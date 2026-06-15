@@ -11,7 +11,6 @@ import {
   Landmark,
   GraduationCap,
   HeartPulse,
-  ShieldCheck,
 } from 'lucide-react';
 
 const industries = [
@@ -27,7 +26,7 @@ const industries = [
     name: 'Hotels & Lodges',
     icon: Hotel,
     value:
-      'Enhancing guest experience with seamless Wi-Fi, IP IPTV, intelligent surveillance, and integrated access control across every touchpoint.',
+      'Enhancing guest experience with seamless Wi-Fi, intelligent surveillance, and integrated access control across every touchpoint.',
     image:
       'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=800',
   },
@@ -43,33 +42,25 @@ const industries = [
     name: 'Banks & Financial Institutions',
     icon: Landmark,
     value:
-      'Delivering high-security surveillance, robust private data centres, endpoint protection, and rigorous cybersecurity compliance frameworks.',
+      'High-security surveillance, robust private data centres, endpoint protection, and cybersecurity compliance for financial operations.',
     image:
-      'https://images.unsplash.com/photo-1501167783532-38f51b61ceb9?auto=format&fit=crop&q=80&w=800',
+      'https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&q=80&w=800',
   },
   {
     name: 'Healthcare Facilities',
     icon: HeartPulse,
     value:
-      'Securing patient environments with IoT-integrated surveillance, critical power backup (UPS/Solar), and reliable network infrastructure for mission-critical operations.',
+      'IoT-integrated surveillance, critical power backup, and reliable network infrastructure for patient environments and mission-critical operations.',
     image:
-      'https://images.unsplash.com/photo-1519452285022-eb18b8b039f4?auto=format&fit=crop&q=80&w=800',
-  },
-  {
-    name: 'Government & Security Agencies',
-    icon: ShieldCheck,
-    value:
-      'Deploying command-and-control surveillance, private institutional data centres, and large-scale secure connectivity for critical national infrastructure.',
-    image:
-      'https://images.unsplash.com/photo-1541888086925-920a0b404786?auto=format&fit=crop&q=80&w=800',
+      'https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=80&w=800',
   },
   {
     name: 'Warehouses & Logistics',
     icon: Warehouse,
     value:
-      'Ensuring perimeter security, high-density Wi-Fi for barcode and scanner operations, and reliable power backup for uninterrupted logistics.',
+      'Perimeter security, high-density Wi-Fi for scanning operations, and reliable power backup for uninterrupted logistics.',
     image:
-      'https://images.unsplash.com/photo-1586528116311-ad8ed7c80a30?auto=format&fit=crop&q=80&w=800',
+      'https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&q=80&w=800',
   },
   {
     name: 'Retail Chains',
@@ -95,7 +86,7 @@ export function Industries() {
       <PageHero
         title="Sectors We Serve"
         subtitle="Industry Solutions"
-        description="Different industries carry different operational realities, compliance demands, and risk profiles. We tailor every integrated infrastructure solution to match the specific needs of your sector — so your technology works exactly as hard as your organisation does."
+        description="Different industries carry different operational realities, compliance demands, and risk profiles. We tailor every integrated infrastructure solution to match the specific needs of your sector."
         backgroundImage="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=85&w=2400"
       />
 
@@ -107,7 +98,7 @@ export function Industries() {
               All Sectors
             </span>
             <h2 className="text-3xl md:text-4xl font-display font-bold text-white max-w-2xl leading-tight">
-              From critical infrastructure to commercial real estate — one partner, every sector.
+              From critical infrastructure to commercial real estate. One partner, every sector.
             </h2>
           </div>
 

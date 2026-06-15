@@ -11,7 +11,6 @@ import {
   FileText,
   PackageCheck,
   LifeBuoy,
-  Quote,
 } from 'lucide-react';
 import { Button } from '../components/ui/Button';
 import { CtaBand } from '../components/ui/CtaBand';
@@ -124,7 +123,7 @@ export function Home() {
               </h1>
 
               <p className="text-lg md:text-xl text-slate-300 mb-10 leading-relaxed max-w-xl">
-                From smart CCTV cameras with AI and IoT, to enterprise cabling, networking, cybersecurity, cloud infrastructure, and the custom software applications that run on it all — we are the single-point systems integrator East Africa's most demanding organisations depend on.
+                From smart CCTV cameras with AI and IoT, to enterprise cabling, networking, cybersecurity, cloud infrastructure, and the custom software applications that run on it all. We are the systems integrator East Africa's most demanding organisations depend on.
               </p>
 
               <div className="flex flex-wrap gap-2 mb-12">
@@ -227,11 +226,11 @@ export function Home() {
                 A true systems integrator.
               </h2>
               <p className="text-slate-400 text-lg mb-8 leading-relaxed">
-                Fragmented IT projects lead to finger-pointing when things go wrong. Siala Solutions takes full accountability for your entire technology stack — designing, supplying, installing, and managing every layer under one contract and one SLA.
+                Fragmented IT projects lead to finger-pointing when things go wrong. Siala Solutions takes full accountability for your entire technology stack: designing, supplying, installing, and managing every layer under one contract and one SLA.
               </p>
               <ul className="space-y-4 mb-10">
                 {[
-                  'Single-point accountability for complex, multi-disciplinary projects',
+                  'One point of accountability for complex, multi-disciplinary projects',
                   'Direct partnerships with major global distributors in Dubai and China',
                   'Engineered for longevity with ongoing managed services',
                   'Local expertise backed by international supply chains and standards',
@@ -273,7 +272,7 @@ export function Home() {
                 <Wrench className="w-10 h-10 text-white shrink-0" />
                 <div>
                   <h3 className="font-display font-bold text-white text-xl">One SLA</h3>
-                  <p className="text-sm text-copper-100">Full-Stack Support</p>
+                  <p className="text-sm text-copper-100">Full Stack Support</p>
                 </div>
               </div>
             </motion.div>
@@ -309,14 +308,11 @@ export function Home() {
                   viewport={{ once: true, margin: '-40px' }}
                   transition={{ duration: 0.5, delay: i * 0.12 }}
                 >
-                  {/* Icon circle */}
-                  <div className="relative mb-6">
+                  {/* Icon block */}
+                  <div className="mb-6">
                     <div className="w-[104px] h-[104px] bg-navy-900 border border-navy-700 flex items-center justify-center">
                       <Icon className="w-9 h-9 text-copper-500" />
                     </div>
-                    <span className="absolute -top-2 -right-2 font-mono text-[10px] text-copper-500 bg-navy-950 px-1.5 py-0.5 border border-copper-500/30">
-                      {step.num}
-                    </span>
                   </div>
 
                   <h3 className="text-lg font-display font-bold text-white mb-3 leading-snug">
@@ -387,11 +383,6 @@ export function Home() {
                       <div className="absolute bottom-4 left-4 w-11 h-11 bg-navy-950/90 backdrop-blur-sm border border-navy-700 flex items-center justify-center">
                         <Icon className="w-5 h-5 text-copper-500" />
                       </div>
-                      <div className="absolute top-4 right-4">
-                        <span className="font-mono text-copper-500/50 text-xs">
-                          0{index + 1}
-                        </span>
-                      </div>
                     </div>
                     <div className="p-7">
                       <h3 className="text-lg font-display font-semibold text-white mb-3 group-hover:text-copper-400 transition-colors leading-snug">
@@ -447,51 +438,75 @@ export function Home() {
         </div>
       </section>
 
-      {/* ─── TECHNOLOGY PARTNERS ──────────────────────────────────────── */}
-      <section className="py-16 bg-navy-950 border-b border-navy-800">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      {/* ─── HARDWARE STANDARD ────────────────────────────────────────── */}
+      <section className="py-20 bg-navy-950 border-b border-navy-800 relative overflow-hidden">
+        <div className="absolute inset-0 bg-grid-pattern opacity-[0.03] pointer-events-none" />
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+
           <motion.div
-            className="text-center mb-12"
+            className="mb-14"
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <span className="font-mono text-copper-500 text-xs uppercase tracking-[0.22em] mb-3 block">
-              Technology Partners
+            <span className="font-mono text-copper-500 text-xs uppercase tracking-[0.22em] mb-4 block">
+              What we install
             </span>
-            <p className="text-slate-400 text-sm max-w-md mx-auto">
-              We specify, procure, and integrate hardware and software from the world's leading enterprise manufacturers.
-            </p>
+            <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
+              <h2 className="text-2xl md:text-3xl font-display font-bold text-white max-w-xl leading-snug">
+                Enterprise grade hardware. No grey market. No consumer equipment.
+              </h2>
+              <p className="text-slate-400 text-sm max-w-sm leading-relaxed md:text-right">
+                Every component we specify meets enterprise performance and warranty standards, procured directly, not through a local intermediary.
+              </p>
+            </div>
           </motion.div>
 
-          <motion.div
-            className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-3"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-          >
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-navy-800">
             {[
-              'Cisco', 'Microsoft', 'Dell', 'HP Enterprise',
-              'Hikvision', 'Dahua', 'Fortinet', 'VMware',
-              'AWS', 'Azure', 'Ubiquiti', 'Axis',
-              'Schneider', 'Eaton', 'Bosch', 'HikCentral',
-            ].map((brand, i) => (
+              {
+                category: 'Surveillance',
+                spec: '4K IP cameras with on-device AI inference and edge analytics. Centralised NVR management across single and multi-site deployments.',
+              },
+              {
+                category: 'Networking',
+                spec: 'Enterprise Wi-Fi 6 and 6E access points. Layer 3 switching with hardware-accelerated routing and full VLAN segmentation.',
+              },
+              {
+                category: 'Cybersecurity',
+                spec: 'Hardware firewall appliances with intrusion prevention, deep packet inspection, and centralised policy management.',
+              },
+              {
+                category: 'Compute',
+                spec: 'Rack-mount servers with ECC RAM, hardware RAID, redundant power supplies, and out-of-band remote management.',
+              },
+              {
+                category: 'Power and UPS',
+                spec: 'Online double-conversion UPS with SNMP monitoring, remote management capability, and hot-swap battery modules.',
+              },
+              {
+                category: 'Cloud and Virtualisation',
+                spec: 'Enterprise hypervisors, geo-redundant backup, and multi-cloud architecture on major global platforms.',
+              },
+            ].map((item, i) => (
               <motion.div
-                key={brand}
-                className="border border-navy-700 bg-navy-900/50 px-3 py-3 flex items-center justify-center hover:border-copper-500/40 hover:bg-navy-800/60 transition-colors duration-200"
-                initial={{ opacity: 0, scale: 0.94 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                key={item.category}
+                className="bg-navy-950 p-7 group hover:bg-navy-900 transition-colors duration-300"
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.3, delay: i * 0.04 }}
+                transition={{ duration: 0.4, delay: i * 0.07 }}
               >
-                <span className="font-mono text-[11px] text-slate-400 text-center leading-tight">
-                  {brand}
+                <span className="font-mono text-[10px] text-copper-500 uppercase tracking-[0.2em] mb-3 block">
+                  {item.category}
                 </span>
+                <p className="text-slate-300 text-[15px] leading-relaxed">
+                  {item.spec}
+                </p>
               </motion.div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -540,76 +555,6 @@ export function Home() {
                 <div className="absolute inset-0 flex items-end p-4">
                   <span className="text-white font-display font-medium text-sm leading-tight">
                     {industry.name}
-                  </span>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ─── TESTIMONIALS ─────────────────────────────────────────────── */}
-      <section className="py-28 bg-navy-950 relative overflow-hidden">
-        <div className="absolute inset-0 bg-grid-pattern opacity-[0.03] pointer-events-none" />
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-copper-500/20 to-transparent" />
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="font-mono text-copper-500 text-xs uppercase tracking-[0.22em] mb-5 block">
-              Client Feedback
-            </span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white leading-tight">
-              Trusted by East Africa's most demanding organisations.
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              {
-                quote: "Siala handled our entire IT rollout — structured cabling, surveillance, and the network backbone across three floors — without a single missed deadline. One contract, one team, zero excuses.",
-                name: "David Mugisha",
-                title: "Head of Operations",
-                company: "Kigali Heights Real Estate",
-                sector: "Real Estate",
-              },
-              {
-                quote: "We needed a partner who understood healthcare compliance and could deliver both the physical infrastructure and the software integration. Siala was the only company that could do both. The result speaks for itself.",
-                name: "Dr. Amina Kayitesi",
-                title: "Chief Technology Officer",
-                company: "King Faisal Hospital",
-                sector: "Healthcare",
-              },
-              {
-                quote: "Our branches across Rwanda are now on a unified, secure network. The team's knowledge of banking-grade cybersecurity requirements saved us months of back-and-forth with a more fragmented vendor approach.",
-                name: "Patrick Nzabahimana",
-                title: "IT Director",
-                company: "East African Financial Services",
-                sector: "Banking & Finance",
-              },
-            ].map((t, i) => (
-              <motion.div
-                key={i}
-                className="flex flex-col bg-navy-900 border border-navy-700 p-8 hover:border-copper-500/40 transition-colors duration-300"
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-40px' }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-              >
-                <Quote className="w-7 h-7 text-copper-500/60 mb-6 shrink-0" />
-                <p className="text-slate-300 text-[15px] leading-relaxed mb-8 flex-1">
-                  "{t.quote}"
-                </p>
-                <div className="pt-6 border-t border-navy-700 flex items-center gap-4">
-                  <div className="w-10 h-10 bg-copper-600/20 border border-copper-500/30 flex items-center justify-center shrink-0">
-                    <span className="font-display font-bold text-copper-400 text-sm">
-                      {t.name.charAt(0)}
-                    </span>
-                  </div>
-                  <div>
-                    <p className="font-display font-semibold text-white text-sm">{t.name}</p>
-                    <p className="text-slate-500 text-xs mt-0.5">{t.title} · {t.company}</p>
-                  </div>
-                  <span className="ml-auto font-mono text-[10px] text-copper-500/60 uppercase tracking-wider border border-copper-500/20 px-2 py-1">
-                    {t.sector}
                   </span>
                 </div>
               </motion.div>
