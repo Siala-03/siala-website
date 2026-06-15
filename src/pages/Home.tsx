@@ -28,26 +28,26 @@ const processSteps = [
   {
     num: '01',
     icon: Search,
-    title: 'Discovery & Scoping',
-    desc: 'We assess your site, existing infrastructure, and operational requirements before any recommendation is made.',
+    title: 'Site assessment',
+    desc: 'We come to site, look at what exists, understand the operational requirements, and ask the questions most vendors skip.',
   },
   {
     num: '02',
     icon: FileText,
-    title: 'System Design',
-    desc: 'Our engineers produce the complete architecture — cabling routes, network topology, hardware specification, and software data flows.',
+    title: 'Design and proposal',
+    desc: 'We produce the full architecture: cabling routes, network layout, hardware list, and software requirements. Nothing vague.',
   },
   {
     num: '03',
     icon: PackageCheck,
-    title: 'Supply & Installation',
-    desc: 'We procure directly through our global supply chain and deploy with certified on-site engineers, to spec and on schedule.',
+    title: 'Supply and installation',
+    desc: 'We order directly from our distributors and install with our own engineers. We do not subcontract the physical work.',
   },
   {
     num: '04',
     icon: LifeBuoy,
-    title: 'Managed Services',
-    desc: 'Ongoing monitoring, scheduled maintenance, and SLA-backed support for the full lifespan of your infrastructure.',
+    title: 'Ongoing support',
+    desc: 'We stay on after handover. Monitoring, maintenance, and a support contract that means something when things go wrong.',
   },
 ];
 
@@ -123,7 +123,7 @@ export function Home() {
               </h1>
 
               <p className="text-lg md:text-xl text-slate-300 mb-10 leading-relaxed max-w-xl">
-                From smart CCTV cameras with AI and IoT, to enterprise cabling, networking, cybersecurity, cloud infrastructure, and the custom software applications that run on it all. We are the systems integrator East Africa's most demanding organisations depend on.
+                We handle the cabling, networking, security cameras, servers, cybersecurity, and the software that ties it all together. One contract. One team. Whatever breaks, we own it.
               </p>
 
               <div className="flex flex-wrap gap-2 mb-12">
@@ -286,10 +286,10 @@ export function Home() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-2xl mx-auto mb-20">
             <span className="font-mono text-copper-500 text-xs uppercase tracking-[0.22em] mb-5 block">
-              Our Engagement Model
+              How a project runs
             </span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white leading-tight">
-              How we work with you.
+              From first conversation to live system.
             </h2>
           </div>
 
@@ -349,8 +349,8 @@ export function Home() {
                 Our Capabilities
               </span>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white leading-tight">
-                Six specialised divisions.<br />
-                One cohesive solution.
+                Six areas of work.<br />
+                All under one roof.
               </h2>
             </div>
             <Button href="/services" variant="ghost" icon={<ArrowRight className="w-4 h-4" />}>
@@ -417,9 +417,9 @@ export function Home() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center divide-y md:divide-y-0 md:divide-x divide-navy-700">
             {[
-              { icon: Globe, title: 'Global Supply Chain', desc: 'Direct partnerships with major distributors in Dubai and China — enterprise hardware at competitive lead times.' },
-              { icon: ShieldCheck, title: 'Enterprise Grade', desc: 'Only certified, high-performance hardware from recognised global manufacturers is specified and installed.' },
-              { icon: Wrench, title: 'Local Execution', desc: 'Headquartered in Kigali with deep East African operational expertise and responsive on-site support.' },
+              { icon: Globe, title: 'We buy direct', desc: 'Hardware comes from our distributors in Dubai and China. No local middleman, which means shorter lead times and better pricing.' },
+              { icon: ShieldCheck, title: 'No consumer equipment', desc: 'Everything we specify is enterprise grade from established manufacturers. We do not cut corners on hardware.' },
+              { icon: Wrench, title: 'Based in Kigali', desc: 'Our team is here. We come to site, we stay on the account, and we pick up the phone when something goes wrong.' },
             ].map(({ icon: Icon, title, desc }, i) => (
               <motion.div
                 key={title}

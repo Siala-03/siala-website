@@ -18,7 +18,7 @@ const industries = [
     name: 'Real Estate Developers',
     icon: Building,
     value:
-      'Future-proofing developments with integrated smart building technology, centralised BMS, and full structured cabling from day one.',
+      'Developers come to us early. We wire the building properly from the start so that tenants are not dealing with patchy Wi-Fi and inadequate security two years later.',
     image:
       'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800',
   },
@@ -26,7 +26,7 @@ const industries = [
     name: 'Hotels & Lodges',
     icon: Hotel,
     value:
-      'Enhancing guest experience with seamless Wi-Fi, intelligent surveillance, and integrated access control across every touchpoint.',
+      'Guests notice when the Wi-Fi does not work. We handle the full setup: wireless coverage, surveillance, and access control that staff can actually manage.',
     image:
       'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=800',
   },
@@ -34,7 +34,7 @@ const industries = [
     name: 'Corporate Offices',
     icon: Briefcase,
     value:
-      'Building resilient LAN/WAN infrastructure, secure access systems, and smart building automation for modern, high-performance workspaces.',
+      'We build the network, install the access systems, and set up the infrastructure that a modern office needs to run without constant IT problems.',
     image:
       'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800',
   },
@@ -42,7 +42,7 @@ const industries = [
     name: 'Banks & Financial Institutions',
     icon: Landmark,
     value:
-      'High-security surveillance, robust private data centres, endpoint protection, and cybersecurity compliance for financial operations.',
+      'Banks need surveillance that works, data centres that stay up, and security that meets compliance requirements. We have done this across multiple financial institutions in the region.',
     image:
       'https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&q=80&w=800',
   },
@@ -50,7 +50,7 @@ const industries = [
     name: 'Healthcare Facilities',
     icon: HeartPulse,
     value:
-      'IoT-integrated surveillance, critical power backup, and reliable network infrastructure for patient environments and mission-critical operations.',
+      'Hospitals cannot have downtime. We install reliable networks, camera systems that cover restricted areas, and power backup that keeps critical equipment running.',
     image:
       'https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=80&w=800',
   },
@@ -58,7 +58,7 @@ const industries = [
     name: 'Warehouses & Logistics',
     icon: Warehouse,
     value:
-      'Perimeter security, high-density Wi-Fi for scanning operations, and reliable power backup for uninterrupted logistics.',
+      'Large floor areas, perimeter security, scanning operations — we set up the wireless coverage and surveillance that logistics operations depend on around the clock.',
     image:
       'https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&q=80&w=800',
   },
@@ -66,7 +66,7 @@ const industries = [
     name: 'Retail Chains',
     icon: ShoppingBag,
     value:
-      'Connecting multi-site operations with secure VPNs, centralised CCTV monitoring, and smart POS infrastructure across all locations.',
+      'Multi-branch retail needs a network that connects all locations, CCTV that can be monitored centrally, and infrastructure that does not require a different vendor at every site.',
     image:
       'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800',
   },
@@ -74,7 +74,7 @@ const industries = [
     name: 'Educational Institutions',
     icon: GraduationCap,
     value:
-      'Campus-wide connectivity, smart access control, PA systems, and critical power management for schools, colleges, and universities.',
+      'Schools and universities need campus-wide connectivity, controlled access, and systems that work reliably without a full-time IT department to manage them.',
     image:
       'https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&q=80&w=800',
   },
@@ -84,9 +84,9 @@ export function Industries() {
   return (
     <div className="flex flex-col">
       <PageHero
-        title="Sectors We Serve"
-        subtitle="Industry Solutions"
-        description="Different industries carry different operational realities, compliance demands, and risk profiles. We tailor every integrated infrastructure solution to match the specific needs of your sector."
+        title="Where we spend most of our time."
+        subtitle="Sectors"
+        description="We have worked across most sectors in East Africa. Each one has different requirements, different compliance pressures, and different failure modes. Here is where we have the most experience."
         backgroundImage="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=85&w=2400"
       />
 
@@ -98,7 +98,7 @@ export function Industries() {
               All Sectors
             </span>
             <h2 className="text-3xl md:text-4xl font-display font-bold text-white max-w-2xl leading-tight">
-              From critical infrastructure to commercial real estate. One partner, every sector.
+              We have worked across most of these sectors. Here is what we know about each one.
             </h2>
           </div>
 

@@ -10,9 +10,9 @@ export function Services() {
   return (
     <div className="flex flex-col">
       <PageHero
-        title="Six Practice Areas. One Accountable Partner."
-        subtitle="End-to-End Capabilities"
-        description="We deliver technology solutions across six specialised practice areas: security, connectivity, cybersecurity, compute, smart building systems, and integrated software development. Every layer engineered to work as one system under a single SLA."
+        title="Six areas of work. One team handling all of it."
+        subtitle="What We Do"
+        description="Security and surveillance, network infrastructure, cybersecurity, compute and cloud, smart building systems, and custom software. All done in-house, not subcontracted, and covered under one SLA."
         backgroundImage="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=85&w=2400"
       />
 

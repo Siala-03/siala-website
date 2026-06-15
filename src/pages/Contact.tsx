@@ -16,9 +16,9 @@ export function Contact() {
   return (
     <div className="flex flex-col">
       <PageHero
-        title="Let's Discuss Your Infrastructure Needs."
+        title="Tell us what you are trying to build."
         subtitle="Get in Touch"
-        description="Whether you are scoping a new development, evaluating a technology refresh, or responding to a critical infrastructure requirement, our team in Kigali is ready to engage."
+        description="We work best when we understand the full picture early. Whether you have a detailed brief or just a problem you need solved, get in touch and we will take it from there."
         backgroundImage="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=85&w=2400"
       />
 
