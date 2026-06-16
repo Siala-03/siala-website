@@ -5,12 +5,25 @@ import { MapPin, Phone, Mail, CheckCircle2, Clock } from 'lucide-react';
 import { Button } from '../components/ui/Button';
 
 export function Contact() {
-  const [formState, setFormState] = useState<'idle' | 'submitting' | 'success'>('idle');
+  const [formState, setFormState] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setFormState('submitting');
-    setTimeout(() => setFormState('success'), 1500);
+    try {
+      const res = await fetch('https://formspree.io/f/xqeojpek', {
+        method: 'POST',
+        body: new FormData(e.currentTarget),
+        headers: { Accept: 'application/json' },
+      });
+      if (res.ok) {
+        setFormState('success');
+      } else {
+        setFormState('error');
+      }
+    } catch {
+      setFormState('error');
+    }
   };
 
   return (
@@ -138,6 +151,7 @@ export function Contact() {
                       <input
                         type="text"
                         id="name"
+                        name="name"
                         required
                         className="w-full bg-navy-900 border border-navy-700 px-4 py-3.5 text-white text-sm focus:outline-none focus:border-copper-500 focus:ring-1 focus:ring-copper-500 transition-all"
                         placeholder="John Doe"
@@ -150,6 +164,7 @@ export function Contact() {
                       <input
                         type="text"
                         id="company"
+                        name="company"
                         className="w-full bg-navy-900 border border-navy-700 px-4 py-3.5 text-white text-sm focus:outline-none focus:border-copper-500 focus:ring-1 focus:ring-copper-500 transition-all"
                         placeholder="Organisation Name"
                       />
@@ -164,6 +179,7 @@ export function Contact() {
                       <input
                         type="email"
                         id="email"
+                        name="email"
                         required
                         className="w-full bg-navy-900 border border-navy-700 px-4 py-3.5 text-white text-sm focus:outline-none focus:border-copper-500 focus:ring-1 focus:ring-copper-500 transition-all"
                         placeholder="john@organisation.com"
@@ -176,6 +192,7 @@ export function Contact() {
                       <input
                         type="tel"
                         id="phone"
+                        name="phone"
                         className="w-full bg-navy-900 border border-navy-700 px-4 py-3.5 text-white text-sm focus:outline-none focus:border-copper-500 focus:ring-1 focus:ring-copper-500 transition-all"
                         placeholder="+250 ..."
                       />
@@ -188,6 +205,7 @@ export function Contact() {
                     </label>
                     <select
                       id="service"
+                      name="service"
                       className="w-full bg-navy-900 border border-navy-700 px-4 py-3.5 text-slate-300 text-sm focus:outline-none focus:border-copper-500 focus:ring-1 focus:ring-copper-500 transition-all"
                     >
                       <option value="">Select a practice area</option>
@@ -206,6 +224,7 @@ export function Contact() {
                     </label>
                     <textarea
                       id="message"
+                      name="message"
                       rows={5}
                       required
                       className="w-full bg-navy-900 border border-navy-700 px-4 py-3.5 text-white text-sm focus:outline-none focus:border-copper-500 focus:ring-1 focus:ring-copper-500 transition-all resize-none"
@@ -213,6 +232,11 @@ export function Contact() {
                     />
                   </div>
 
+                  {formState === 'error' && (
+                    <p className="text-red-400 text-sm text-center">
+                      Something went wrong. Please try again or email us directly at sialasolutions@gmail.com
+                    </p>
+                  )}
                   <Button
                     type="submit"
                     size="lg"
