@@ -8,8 +8,8 @@ export const servicesData = [
   image:
   'https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&q=85&w=2400',
   gallery: [
-  'https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80&w=1000',
-  'https://images.unsplash.com/photo-1587502537745-84b86da1204f?auto=format&fit=crop&q=80&w=1000'],
+  'https://images.unsplash.com/photo-1560523159-4a9692d222ef?auto=format&fit=crop&q=80&w=1000',
+  'https://images.unsplash.com/photo-1585771724684-38269d6639fd?auto=format&fit=crop&q=80&w=1000'],
 
   shortDescription:
   'Smart CCTV cameras using AI and IoT, access control, and remote monitoring for institutional, commercial, and high-security environments.',
@@ -70,8 +70,8 @@ export const servicesData = [
   image:
   'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=85&w=2400',
   gallery: [
-  'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1000',
-  'https://images.unsplash.com/photo-1614064641913-6b67aa2cb5c0?auto=format&fit=crop&q=80&w=1000'],
+  'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=1000',
+  'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1000'],
 
   shortDescription:
   'Proactive digital defence: audits, endpoint protection, SOC monitoring, and compliance consulting for organisations that cannot afford a breach.',
@@ -102,8 +102,8 @@ export const servicesData = [
   image:
   'https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&q=85&w=2400',
   gallery: [
-  'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=1000',
-  'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&q=80&w=1000'],
+  'https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?auto=format&fit=crop&q=80&w=1000',
+  'https://images.unsplash.com/photo-1667984390538-3dea7a3fe33d?auto=format&fit=crop&q=80&w=1000'],
 
   shortDescription:
   'Server procurement, virtualisation, cloud migration, and private data centres. On-premise, cloud, or hybrid.',
