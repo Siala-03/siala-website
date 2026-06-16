@@ -17,7 +17,7 @@ const differentiators = [
   {
     title: 'Hardware shipped directly from Dubai and China.',
     desc: 'We buy from distributors in Dubai and China: Hikvision, Cisco, HP, Dell, and others. No local intermediary between the manufacturer and the installation.\n\nThis cuts lead time and reduces cost. The price reflects what it actually costs to procure and ship, not what a local agent needs to add to make their margin.',
-    image: 'https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&q=80&w=800',
+    image: 'https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&q=80&w=800',
   },
   {
     title: 'We stay involved after the installation.',

@@ -60,7 +60,7 @@ const industries = [
     value:
       'Large floor areas, perimeter security, scanning operations — we set up the wireless coverage and surveillance that logistics operations depend on around the clock.',
     image:
-      'https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&q=80&w=800',
+      'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800',
   },
   {
     name: 'Retail Chains',
