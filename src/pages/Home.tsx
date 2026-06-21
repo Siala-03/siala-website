@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { motion, useInView, animate } from 'framer-motion';
 import {
   ArrowRight,
@@ -76,6 +77,11 @@ function AnimatedCounter({ value, suffix = '' }: { value: number; suffix?: strin
 export function Home() {
   return (
     <div className="flex flex-col">
+      <Helmet>
+        <title>Siala Solutions — IT Infrastructure Systems Integrator | Kigali, Rwanda</title>
+        <meta name="description" content="East Africa's integrated IT infrastructure company. Security, networking, cybersecurity, compute, and software — one contract, one team." />
+        <link rel="canonical" href="https://sialasolutions.com/" />
+      </Helmet>
 
       {/* ─── HERO ─────────────────────────────────────────────────────── */}
       <section className="relative min-h-screen flex flex-col justify-center pt-28 pb-16 overflow-hidden">

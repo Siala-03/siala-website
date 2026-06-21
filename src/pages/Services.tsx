@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { PageHero } from '../components/ui/PageHero';
 import { servicesData } from '../data/services';
 import { Link } from 'react-router-dom';
@@ -9,6 +10,11 @@ import { CtaBand } from '../components/ui/CtaBand';
 export function Services() {
   return (
     <div className="flex flex-col">
+      <Helmet>
+        <title>Services — Security, Networking, Cybersecurity, Compute & Software | Siala Solutions</title>
+        <meta name="description" content="Security and surveillance, network infrastructure, cybersecurity, compute and cloud, smart building systems, and custom software. All in-house, one SLA." />
+        <link rel="canonical" href="https://sialasolutions.com/services" />
+      </Helmet>
       <PageHero
         title="Six areas of work. One team handling all of it."
         subtitle="What We Do"

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { PageHero } from '../components/ui/PageHero';
 import { CtaBand } from '../components/ui/CtaBand';
 import { motion } from 'framer-motion';
@@ -6,6 +7,11 @@ import { motion } from 'framer-motion';
 export function About() {
   return (
     <div className="flex flex-col">
+      <Helmet>
+        <title>About Siala Solutions — IT Infrastructure Systems Integrator in Kigali</title>
+        <meta name="description" content="Siala Solutions was built to close the gap between separate IT contractors. One company handling network, security, servers, and software — from site assessment to managed services." />
+        <link rel="canonical" href="https://sialasolutions.com/about" />
+      </Helmet>
       <PageHero
         title="We cover every layer. That was the whole point."
         subtitle="About Siala"

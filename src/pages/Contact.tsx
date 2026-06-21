@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { PageHero } from '../components/ui/PageHero';
 import { motion } from 'framer-motion';
 import { MapPin, Phone, Mail, CheckCircle2, Clock } from 'lucide-react';
@@ -28,6 +29,11 @@ export function Contact() {
 
   return (
     <div className="flex flex-col">
+      <Helmet>
+        <title>Contact Siala Solutions — IT Infrastructure Consultation | Kigali, Rwanda</title>
+        <meta name="description" content="Get in touch for a consultation. We handle the full scope — from site assessment to managed services. Based in Kigali, serving East Africa." />
+        <link rel="canonical" href="https://sialasolutions.com/contact" />
+      </Helmet>
       <PageHero
         title="Tell us what you are trying to build."
         subtitle="Get in Touch"

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { PageHero } from '../components/ui/PageHero';
 import { CtaBand } from '../components/ui/CtaBand';
 import { motion } from 'framer-motion';
@@ -29,6 +30,11 @@ const differentiators = [
 export function WhySiala() {
   return (
     <div className="flex flex-col">
+      <Helmet>
+        <title>Why Siala — One Contract, One Team, Full Accountability | Siala Solutions</title>
+        <meta name="description" content="Most IT projects involve separate contractors for networking, security, and servers. When something breaks between them, nobody owns the problem. We do." />
+        <link rel="canonical" href="https://sialasolutions.com/why-siala" />
+      </Helmet>
       <PageHero
         title="What separates a systems integrator from a vendor."
         subtitle="Why Siala"

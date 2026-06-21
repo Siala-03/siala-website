@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { useParams, Navigate, Link } from 'react-router-dom';
 import { servicesData } from '../data/services';
 import { PageHero } from '../components/ui/PageHero';
@@ -61,6 +62,11 @@ export function ServiceDetail() {
 
   return (
     <div className="flex flex-col">
+      <Helmet>
+        <title>{service.title} — Siala Solutions | Kigali, Rwanda</title>
+        <meta name="description" content={service.description} />
+        <link rel="canonical" href={`https://sialasolutions.com/services/${service.id}`} />
+      </Helmet>
       <PageHero
         title={service.title}
         subtitle="Practice Area"

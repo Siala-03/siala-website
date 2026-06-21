@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sialasolutions.com/sitemap.xml

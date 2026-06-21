@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { PageHero } from '../components/ui/PageHero';
 import { CtaBand } from '../components/ui/CtaBand';
 import { motion } from 'framer-motion';
@@ -83,6 +84,11 @@ const industries = [
 export function Industries() {
   return (
     <div className="flex flex-col">
+      <Helmet>
+        <title>Industries — Real Estate, Banking, Healthcare, Hospitality & More | Siala Solutions</title>
+        <meta name="description" content="IT infrastructure for real estate developers, banks, hotels, hospitals, warehouses, retail chains, and government institutions across East Africa." />
+        <link rel="canonical" href="https://sialasolutions.com/industries" />
+      </Helmet>
       <PageHero
         title="Where we spend most of our time."
         subtitle="Sectors"
