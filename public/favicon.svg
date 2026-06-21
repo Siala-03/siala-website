@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Geometric node-link mark from Siala logo -->
+  <g stroke="#C87941" stroke-width="2" stroke-linecap="round">
+    <!-- Outer diamond edges -->
+    <line x1="32" y1="4" x2="52" y2="20"/>
+    <line x1="52" y1="20" x2="52" y2="44"/>
+    <line x1="52" y1="44" x2="32" y2="60"/>
+    <line x1="32" y1="60" x2="12" y2="44"/>
+    <line x1="12" y1="44" x2="12" y2="20"/>
+    <line x1="12" y1="20" x2="32" y2="4"/>
+    <!-- Cross connections -->
+    <line x1="12" y1="20" x2="52" y2="44"/>
+    <line x1="52" y1="20" x2="12" y2="44"/>
+    <line x1="32" y1="4" x2="32" y2="60"/>
+    <!-- Mid connections -->
+    <line x1="32" y1="32" x2="12" y2="20"/>
+    <line x1="32" y1="32" x2="52" y2="20"/>
+    <line x1="32" y1="32" x2="12" y2="44"/>
+    <line x1="32" y1="32" x2="52" y2="44"/>
+  </g>
+  <!-- Nodes -->
+  <g fill="#C87941">
+    <circle cx="32" cy="4" r="4"/>
+    <circle cx="52" cy="20" r="4"/>
+    <circle cx="52" cy="44" r="4"/>
+    <circle cx="32" cy="60" r="4"/>
+    <circle cx="12" cy="44" r="4"/>
+    <circle cx="12" cy="20" r="4"/>
+    <circle cx="32" cy="32" r="5"/>
+  </g>
+</svg>
