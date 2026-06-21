@@ -61,9 +61,9 @@ export function Header() {
           {/* Logo */}
           <Link to="/" className="flex items-center shrink-0 group">
             <img
-              src="/sialalogo.svg"
+              src="/sialalogo.png"
               alt="Siala Solutions"
-              className="h-10 w-auto opacity-90 group-hover:opacity-100 transition-opacity duration-200"
+              className="h-14 w-auto transition-opacity duration-200" style={{ mixBlendMode: 'screen' }}
             />
           </Link>
 
