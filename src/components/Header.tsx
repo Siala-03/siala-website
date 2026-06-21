@@ -61,7 +61,7 @@ export function Header() {
           {/* Logo */}
           <Link to="/" className="flex items-center shrink-0 group">
             <img
-              src="/sialalogo.png"
+              src="/sialalogo.svg"
               alt="Siala Solutions"
               className="h-10 w-auto opacity-90 group-hover:opacity-100 transition-opacity duration-200"
             />

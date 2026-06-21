@@ -15,7 +15,7 @@ export function Footer() {
           <div className="flex flex-col gap-5">
             <Link to="/" className="flex items-center shrink-0">
               <img
-                src="/sialalogo.png"
+                src="/sialalogo.svg"
                 alt="Siala Solutions"
                 className="h-7 w-auto opacity-80 hover:opacity-100 transition-opacity duration-200"
               />
