@@ -5,11 +5,8 @@ export const servicesData = [
   id: 'security-surveillance',
   title: 'Intelligent Security & Surveillance',
   icon: Shield,
-  image:
-  'https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&q=85&w=2400',
-  gallery: [
-  'https://images.unsplash.com/photo-1528312635006-8ea0bc49ec63?auto=format&fit=crop&q=80&w=1000',
-  'https://images.unsplash.com/photo-1618482914248-29272d021005?auto=format&fit=crop&q=80&w=1000'],
+  image: '/security4.jpg',
+  gallery: ['/security5.jpg', '/security7.jpg'],
 
   shortDescription:
   'Smart CCTV cameras using AI and IoT, access control, and remote monitoring for institutional, commercial, and high-security environments.',
@@ -37,11 +34,8 @@ export const servicesData = [
   id: 'connectivity-infrastructure',
   title: 'Cabling & Network Infrastructure',
   icon: Wifi,
-  image:
-  'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&q=85&w=2400',
-  gallery: [
-  'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&q=80&w=1000',
-  'https://images.unsplash.com/photo-1562408590-e32931084e23?auto=format&fit=crop&q=80&w=1000'],
+  image: '/cabling5.jpg',
+  gallery: ['/cabling.jpg', '/cabling2.jpg'],
 
   shortDescription:
   'Resilient enterprise networking: structured cabling, high-density Wi-Fi, routing, and WAN design built to carry every device you depend on.',
@@ -99,11 +93,8 @@ export const servicesData = [
   id: 'compute-cloud',
   title: 'Compute & Cloud Infrastructure',
   icon: Server,
-  image:
-  'https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&q=85&w=2400',
-  gallery: [
-  'https://images.unsplash.com/photo-1762163516269-3c143e04175c?auto=format&fit=crop&q=80&w=1000',
-  'https://images.unsplash.com/photo-1775519520461-6b6e068d9250?auto=format&fit=crop&q=80&w=1000'],
+  image: '/compute2.jpg',
+  gallery: ['/compute6.jpg', '/compute4.jpg'],
 
   shortDescription:
   'Server procurement, virtualisation, cloud migration, and private data centres. On-premise, cloud, or hybrid.',
@@ -132,10 +123,8 @@ export const servicesData = [
   title: 'Smart Building & Power Systems',
   icon: Cpu,
   image:
-  'https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&q=85&w=2400',
-  gallery: [
-  'https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&q=80&w=1000',
-  'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&q=80&w=1000'],
+  '/smartbuildings.jpg',
+  gallery: ['/smartbuildings1.jpg', '/smartbuildings2.jpg'],
 
   shortDescription:
   'Building automation, energy monitoring, UPS, solar integration, and life-safety systems for intelligent, efficient environments.',

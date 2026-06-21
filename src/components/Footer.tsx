@@ -17,7 +17,7 @@ export function Footer() {
               <img
                 src="/sialalogo.png"
                 alt="Siala Solutions"
-                className="h-12 w-auto transition-opacity duration-200" style={{ mixBlendMode: 'screen' }}
+                className="h-14 w-auto transition-opacity duration-200" style={{ mixBlendMode: 'screen' }}
               />
             </Link>
             <p className="text-slate-400 text-sm leading-relaxed">

@@ -67,7 +67,7 @@ export function About() {
                   className="w-full h-64 object-cover border border-navy-700"
                 />
                 <img
-                  src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=800"
+                  src="/compute1.jpg"
                   alt="Server Infrastructure"
                   className="w-full h-64 object-cover border border-navy-700 mt-8"
                 />

@@ -19,7 +19,7 @@ export function Services() {
         title="Six areas of work. One team handling all of it."
         subtitle="What We Do"
         description="Security and surveillance, network infrastructure, cybersecurity, compute and cloud, smart building systems, and custom software. All done in-house, not subcontracted, and covered under one SLA."
-        backgroundImage="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=85&w=2400"
+        backgroundImage="/compute.jpg"
       />
 
       <section className="py-28 bg-navy-900">

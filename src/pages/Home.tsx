@@ -159,7 +159,7 @@ export function Home() {
             >
               <div className="relative aspect-[3/4] overflow-hidden border border-copper-500/25 shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&q=85&w=1200"
+                  src="/security5.jpg"
                   alt="Smart CCTV surveillance infrastructure"
                   className="w-full h-full object-cover"
                 />
@@ -261,7 +261,7 @@ export function Home() {
             >
               <div className="aspect-[4/3] relative overflow-hidden border border-navy-700">
                 <img
-                  src="https://images.unsplash.com/photo-1597852074816-d933c7d2b988?auto=format&fit=crop&q=80&w=1000"
+                  src="/compute3.jpg"
                   alt="Server room infrastructure"
                   className="w-full h-full object-cover"
                 />
@@ -538,7 +538,7 @@ export function Home() {
               { name: 'Real Estate Developers', img: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800' },
               { name: 'Hotels & Lodges',        img: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=800' },
               { name: 'Banks & Finance',        img: 'https://images.unsplash.com/photo-1554469384-e58fac16e23a?auto=format&fit=crop&q=80&w=800' },
-              { name: 'Government & Institutions', img: 'https://images.unsplash.com/photo-1555169062-013468b47731?auto=format&fit=crop&q=80&w=800' },
+              { name: 'Government & Institutions', img: '/government1.jpg' },
               { name: 'Corporate Offices',      img: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800' },
               { name: 'Schools & Hospitals',    img: 'https://images.unsplash.com/photo-1538108149393-fbbd81895907?auto=format&fit=crop&q=80&w=800' },
               { name: 'Warehouses & Logistics', img: 'https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&q=80&w=800' },

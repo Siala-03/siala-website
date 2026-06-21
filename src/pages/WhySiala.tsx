@@ -8,7 +8,7 @@ const differentiators = [
   {
     title: 'One contract. One team responsible for all of it.',
     desc: 'When the network fails and the networking contractor blames the server configuration, both vendors get a callout fee and the problem stays open. We designed the network and the servers. There is no argument about whose fault it is.\n\nEvery system we install falls under one SLA. One call. One team.',
-    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=800',
+    image: '/compute5.jpg',
   },
   {
     title: 'We build the infrastructure and the software on it.',
