@@ -215,7 +215,7 @@ export const servicesData = [
   title: 'Premium Displays & Digital Signage',
   icon: Monitor,
   image:
-  'https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&q=85&w=2400',
+  'https://images.unsplash.com/photo-1593784991095-a205069470b6?auto=format&fit=crop&q=85&w=2400',
   gallery: [
   'https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=1000',
   'https://images.unsplash.com/photo-1478737270239-2f02b77fc618?auto=format&fit=crop&q=80&w=1000'],
