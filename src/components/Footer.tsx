@@ -79,6 +79,8 @@ export function Footer() {
                 { name: 'Compute & Cloud', path: 'compute-cloud' },
                 { name: 'Smart Building & Power', path: 'smart-building-power' },
               { name: 'Integrated Software Solutions', path: 'integrated-software' },
+                { name: 'Unified Communications', path: 'unified-communications' },
+                { name: 'Displays & Digital Signage', path: 'displays-signage' },
               ].map((item) => (
                 <li key={item.name}>
                   <Link
@@ -100,7 +102,6 @@ export function Footer() {
               <li className="flex items-start gap-3 text-sm text-slate-400">
                 <MapPin className="w-4 h-4 text-copper-500 shrink-0 mt-0.5" />
                 <span className="leading-relaxed">
-                  40KG 42 St, Ijuru Co-working Space<br />
                   Kigali, Rwanda
                 </span>
               </li>
@@ -112,8 +113,8 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3 text-sm text-slate-400">
                 <Mail className="w-4 h-4 text-copper-500 shrink-0" />
-                <a href="mailto:sialasolutions@gmail.com" className="hover:text-copper-400 transition-colors">
-                  sialasolutions@gmail.com
+                <a href="mailto:info@sialasolutions.rw" className="hover:text-copper-400 transition-colors">
+                  info@sialasolutions.rw
                 </a>
               </li>
             </ul>

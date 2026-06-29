@@ -19,10 +19,10 @@ import { servicesData } from '../data/services';
 import { Link } from 'react-router-dom';
 
 const stats = [
-  { value: 6,   label: 'Practice Areas',     suffix: '' },
+  { value: 8,   label: 'Practice Areas',     suffix: '' },
   { value: 10,  label: 'Sectors Served',     suffix: '+' },
   { value: 100, label: 'Accountability',     suffix: '%' },
-  { value: 2,   label: 'Global Supply Hubs', suffix: '' },
+  { value: 3,   label: 'Supply Partners',    suffix: '' },
 ];
 
 const processSteps = [
@@ -79,7 +79,7 @@ export function Home() {
     <div className="flex flex-col">
       <Helmet>
         <title>Siala Solutions — IT Infrastructure Systems Integrator | Kigali, Rwanda</title>
-        <meta name="description" content="East Africa's integrated IT infrastructure company. Security, networking, cybersecurity, compute, and software — one contract, one team." />
+        <meta name="description" content="Security, networking, cybersecurity, compute, and software — one contract, one team. In partnership with Mart Networks. Based in Kigali, serving East Africa." />
         <link rel="canonical" href="https://sialasolutions.com/" />
       </Helmet>
 
@@ -355,7 +355,7 @@ export function Home() {
                 Our Capabilities
               </span>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white leading-tight">
-                Six areas of work.<br />
+                Eight areas of work.<br />
                 All under one roof.
               </h2>
             </div>
@@ -423,7 +423,7 @@ export function Home() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center divide-y md:divide-y-0 md:divide-x divide-navy-700">
             {[
-              { icon: Globe, title: 'We buy direct', desc: 'Hardware comes from our distributors in Dubai and China. No local middleman, which means shorter lead times and better pricing.' },
+              { icon: Globe, title: 'We buy direct', desc: 'Hardware comes from our strategic distribution partner Mart Networks and our international supply network. No grey market, no consumer equipment — enterprise-grade equipment, shorter lead times, and competitive pricing.' },
               { icon: ShieldCheck, title: 'No consumer equipment', desc: 'Everything we specify is enterprise grade from established manufacturers. We do not cut corners on hardware.' },
               { icon: Wrench, title: 'Based in Kigali', desc: 'Our team is here. We come to site, we stay on the account, and we pick up the phone when something goes wrong.' },
             ].map(({ icon: Icon, title, desc }, i) => (
@@ -441,6 +441,29 @@ export function Home() {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ─── STRATEGIC PARTNERS ─────────────────────────────────────── */}
+      <section className="py-16 bg-navy-900 border-b border-navy-800">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <motion.div
+            className="max-w-3xl mx-auto text-center"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <span className="font-mono text-copper-500 text-xs uppercase tracking-[0.22em] mb-5 block">
+              Strategic Partners
+            </span>
+            <h3 className="text-xl md:text-2xl font-display font-bold text-white mb-4 leading-snug">
+              Mart Networks (Rwanda)
+            </h3>
+            <p className="text-slate-400 text-sm leading-relaxed">
+              Our IT distribution and infrastructure partner, giving clients access to enterprise-grade hardware from leading global manufacturers, local stock availability, and manufacturer-backed support.
+            </p>
+          </motion.div>
         </div>
       </section>
 

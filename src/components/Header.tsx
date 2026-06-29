@@ -10,6 +10,8 @@ import {
   Cpu,
   Zap,
   Code2,
+  PhoneCall,
+  Monitor,
 } from 'lucide-react';
 import { Button } from './ui/Button';
 import { twMerge } from 'tailwind-merge';
@@ -21,6 +23,8 @@ const services = [
   { name: 'Compute & Cloud Infrastructure', path: '/services/compute-cloud', icon: Server },
   { name: 'Smart Building & Power Systems', path: '/services/smart-building-power', icon: Cpu },
   { name: 'Integrated Software Solutions', path: '/services/integrated-software', icon: Code2 },
+  { name: 'Unified Communications & Collaboration', path: '/services/unified-communications', icon: PhoneCall },
+  { name: 'Premium Displays & Digital Signage', path: '/services/displays-signage', icon: Monitor },
 ];
 
 export function Header() {

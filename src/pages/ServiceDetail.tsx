@@ -44,6 +44,18 @@ const sidebarPoints: Record<string, string[]> = {
     'Integrates with biometric devices, access systems, and BMS where needed',
     'Ongoing support, hosting, and feature development available',
   ],
+  'unified-communications': [
+    'IP telephony and video conferencing designed around your network',
+    'Smart meeting rooms integrated with AV, displays, and booking systems',
+    'Multi-site unified communications on a single platform',
+    'Ongoing support and SLA-backed maintenance',
+  ],
+  'displays-signage': [
+    'Display solutions specified for your exact environment and use case',
+    'LED video walls, interactive screens, and digital signage networks',
+    'Content management and remote scheduling included',
+    'Full installation, configuration, and ongoing support',
+  ],
 };
 
 export function ServiceDetail() {

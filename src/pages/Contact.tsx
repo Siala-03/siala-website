@@ -38,7 +38,7 @@ export function Contact() {
         title="Tell us what you are trying to build."
         subtitle="Get in Touch"
         description="We work best when we understand the full picture early. Whether you have a detailed brief or just a problem you need solved, get in touch and we will take it from there."
-        backgroundImage="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=85&w=2400"
+        backgroundImage="/smartbuildings2.jpg"
       />
 
       <section className="py-28 bg-navy-900 relative">
@@ -64,7 +64,7 @@ export function Contact() {
                   {
                     icon: MapPin,
                     label: 'Address',
-                    content: '40KG 42 St, Ijuru Co-working Space\nKigali, Rwanda',
+                    content: 'Kigali, Rwanda',
                     href: undefined,
                   },
                   {
@@ -76,8 +76,8 @@ export function Contact() {
                   {
                     icon: Mail,
                     label: 'Email',
-                    content: 'sialasolutions@gmail.com',
-                    href: 'mailto:sialasolutions@gmail.com',
+                    content: 'info@sialasolutions.rw',
+                    href: 'mailto:info@sialasolutions.rw',
                   },
                   {
                     icon: Clock,
@@ -240,7 +240,7 @@ export function Contact() {
 
                   {formState === 'error' && (
                     <p className="text-red-400 text-sm text-center">
-                      Something went wrong. Please try again or email us directly at sialasolutions@gmail.com
+                      Something went wrong. Please try again or email us directly at info@sialasolutions.rw
                     </p>
                   )}
                   <Button

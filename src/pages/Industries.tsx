@@ -93,7 +93,7 @@ export function Industries() {
         title="Where we spend most of our time."
         subtitle="Sectors"
         description="We have worked across most sectors in East Africa. Each one has different requirements, different compliance pressures, and different failure modes. Here is where we have the most experience."
-        backgroundImage="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=85&w=2400"
+        backgroundImage="/government1.jpg"
       />
 
       <section className="py-28 bg-navy-900">

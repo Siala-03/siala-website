@@ -39,7 +39,7 @@ export function WhySiala() {
         title="What separates a systems integrator from a vendor."
         subtitle="Why Siala"
         description="Most IT projects in this region are managed through separate contractors: networking, security, servers, software. The gaps between them are where problems happen. We cover all of it under one team and one contract."
-        backgroundImage="https://images.unsplash.com/photo-1591405351990-4726e331f141?auto=format&fit=crop&q=85&w=2400"
+        backgroundImage="/cabling.jpg"
       />
 
       {/* Plain statement */}

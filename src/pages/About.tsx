@@ -16,7 +16,7 @@ export function About() {
         title="We cover every layer. That was the whole point."
         subtitle="About Siala"
         description="Siala Solutions is an IT infrastructure systems integrator based in Kigali, Rwanda. We handle the network, the security systems, the servers, the software, and everything in between — under one contract."
-        backgroundImage="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=85&w=2400"
+        backgroundImage="/cabling4.jpg"
       />
 
       {/* Story Section */}

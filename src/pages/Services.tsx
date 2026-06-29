@@ -16,7 +16,7 @@ export function Services() {
         <link rel="canonical" href="https://sialasolutions.com/services" />
       </Helmet>
       <PageHero
-        title="Six areas of work. One team handling all of it."
+        title="Eight areas of work. One team handling all of it."
         subtitle="What We Do"
         description="Security and surveillance, network infrastructure, cybersecurity, compute and cloud, smart building systems, and custom software. All done in-house, not subcontracted, and covered under one SLA."
         backgroundImage="/compute.jpg"

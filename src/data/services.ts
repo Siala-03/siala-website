@@ -1,4 +1,4 @@
-import { Shield, Wifi, Zap, Server, Cpu, Code2 } from 'lucide-react';
+import { Shield, Wifi, Zap, Server, Cpu, Code2, PhoneCall, Monitor } from 'lucide-react';
 
 export const servicesData = [
 {
@@ -178,5 +178,65 @@ export const servicesData = [
   'End-to-end microfinance platform: from the server room and network we build, to the loan management system, member portal, and USSD banking application running on it',
   'Real estate management system integrated with the building automation, access control, and surveillance infrastructure deployed by Siala across the same property',
   'Custom ERP connecting procurement, finance, and field operations for institutions where Siala also manages the full network and compute infrastructure']
+
+},
+{
+  id: 'unified-communications',
+  title: 'Unified Communications & Collaboration',
+  icon: PhoneCall,
+  image:
+  'https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&q=85&w=2400',
+  gallery: [
+  'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=1000',
+  'https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80&w=1000'],
+
+  shortDescription:
+  'Enterprise communication solutions that keep teams connected. IP telephony, video conferencing, smart meeting rooms, and collaboration platforms — designed and deployed for seamless productivity.',
+  description:
+  'Enterprise communication solutions that keep teams connected. We design and deploy IP telephony, video conferencing, smart meeting rooms, and collaboration platforms that integrate with your existing network infrastructure for seamless, reliable productivity across every location.',
+  capabilities: [
+  'IP Telephony and PBX Systems',
+  'Video Conferencing Solutions',
+  'Smart Meeting Room Design and Integration',
+  'Collaboration Platform Deployment',
+  'Unified Messaging and Presence',
+  'SIP Trunking and Voice over IP',
+  'Audio-Visual System Integration',
+  'Multi-Site Communication Networks'],
+
+  useCases: [
+  'Enterprise IP telephony rollout connecting headquarters, branches, and remote teams on a single unified platform',
+  'Smart meeting room deployments for corporate offices with integrated video conferencing, display, and booking systems',
+  'Collaboration platform integration across multi-site organisations replacing legacy PBX with modern unified communications']
+
+},
+{
+  id: 'displays-signage',
+  title: 'Premium Displays & Digital Signage',
+  icon: Monitor,
+  image:
+  'https://images.unsplash.com/photo-1563986768609-322da13575f2?auto=format&fit=crop&q=85&w=2400',
+  gallery: [
+  'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=1000',
+  'https://images.unsplash.com/photo-1517502884422-41eaead166d4?auto=format&fit=crop&q=80&w=1000'],
+
+  shortDescription:
+  'High-quality display solutions for corporate, hospitality, retail, and command centre environments. From interactive displays to LED video walls — we install, configure, and support.',
+  description:
+  'High-quality display solutions for corporate, hospitality, retail, and command centre environments. From interactive displays and presentation screens to LED video walls and digital signage networks, we handle the full scope: specification, procurement, installation, configuration, and ongoing support.',
+  capabilities: [
+  'LED Video Walls and Large-Format Displays',
+  'Interactive Touchscreen Displays',
+  'Digital Signage Networks and Content Management',
+  'Command Centre and Control Room Displays',
+  'Lobby and Reception Display Solutions',
+  'Menu Boards and Retail Signage',
+  'Wayfinding and Information Kiosks',
+  'Display Mounting, Cabling, and Integration'],
+
+  useCases: [
+  'LED video wall installation for corporate lobbies, command centres, and boardrooms with centralised content management',
+  'Multi-screen digital signage networks for retail chains and hospitality properties with remote scheduling and updates',
+  'Interactive display deployments for conference rooms, training centres, and visitor-facing information systems']
 
 }];
