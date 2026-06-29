@@ -215,10 +215,10 @@ export const servicesData = [
   title: 'Premium Displays & Digital Signage',
   icon: Monitor,
   image:
-  'https://images.unsplash.com/photo-1563986768609-322da13575f2?auto=format&fit=crop&q=85&w=2400',
+  'https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&q=85&w=2400',
   gallery: [
-  'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=1000',
-  'https://images.unsplash.com/photo-1517502884422-41eaead166d4?auto=format&fit=crop&q=80&w=1000'],
+  'https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=1000',
+  'https://images.unsplash.com/photo-1478737270239-2f02b77fc618?auto=format&fit=crop&q=80&w=1000'],
 
   shortDescription:
   'High-quality display solutions for corporate, hospitality, retail, and command centre environments. From interactive displays to LED video walls — we install, configure, and support.',
